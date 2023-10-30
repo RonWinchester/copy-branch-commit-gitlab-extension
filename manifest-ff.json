@@ -9,8 +9,8 @@
   ],
   "applications": {
     "gecko": {
-      "id": "ad@ad",
-      "update_url": "https://raw.githubusercontent.com/ad/ad/master/updates.json"
+      "id": "copy-branch-commit-gitlab-extension@copy-branch-commit-gitlab-extension",
+      "update_url": "https://raw.githubusercontent.com/ad/copy-branch-commit-gitlab-extension/master/updates.json"
     }
   },
   "browser_action": {
@@ -27,7 +27,7 @@
     }
   },
   "description": "Add to issue page two buttons which allow copy branch/commit message",
-  "homepage_url": "https://github.com/ad/ad/blob/master/README.md",
+  "homepage_url": "https://github.com/ad/copy-branch-commit-gitlab-extension/blob/master/README.md",
   "icons": {
     "128": "src/icon/extension.png"
   },
