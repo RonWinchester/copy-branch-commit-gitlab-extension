@@ -1,24 +1,31 @@
 {
-  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
-  "browser_action": {
-    "default_popup": "src/html/popup.html",
-    "default_icon": {
-      "128": "src/icons/extension.png"
-    }
+  "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';",
+      "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
   },
   "description": "Add to issue page two buttons which allow copy branch/commit message",
   "homepage_url": "https://github.com/ad/copy-branch-commit-gitlab-extension/blob/master/README.md",
   "icons": {
-    "128": "src/icons/extension.png"
+      "128": "src/icons/extension.png"
   },
-  "manifest_version": 2,
+  "manifest_version": 3,
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3PRmcRnHFZwHUlCgoTAdBjc9nUjmJo8l8kvkl/OZV6biZFAGUQGdxF1xoGhRccWA7qfQrZdPwcM1VQoVS/1F+87XiutKTe/HNsTAFvOcVS0tjCSH6DOHpewkMUBZujwTIeo7UXUVmCPQ1UbVd6m8KmHYtSHYlaX0uXRcguWhLmO5hASxw4onvAD0uql/t/ntxsIATwn4hVApg0VZhy0QAbMany8/5ByKPa19mCQwsIdRkcpG+PNHTLWPDgeGoDL7S0DxIduraRhTlrDX/zy5ETu6NWq6r+/jRzmXAjx+vSDCU5Ps2YG8QwdCL4Zl+CNVdQrnqz4X1zfPFJ1FFmUSpwIDAQAB",
   "name": "Copy branch/commit message",
   "update_url": "https://raw.githubusercontent.com/ad/copy-branch-commit-gitlab-extension/master/updates.xml",
   "short_name": "Copy branch/commit message",
   "permissions": [
-    "clipboardWrite",
-    "<all_urls>"
+      "clipboardWrite"
   ],
+  "host_permissions": [
+      "https://*/*"
+  ],
+  "content_scripts": [
+      {
+        "js": ["contentScript.js"],
+        "matches": [
+          "https://*/*"
+        ]
+      }
+    ],
   "version": "0.0.2"
 }
