@@ -19,7 +19,7 @@ sed 's/updates\.json/src\/updates\/updates\.json/g' ./temp-ff-manifest.json | te
 sed 's/\.\.\/js\///g' ./src/html/popup.html > temp-popup.html
 
 HTML_FILES="temp-popup.html"
-JS_FILES="./src/js/common.js ./src/js/contentScript.js"
+JS_FILES="./src/js/contentScript.js"
 GEN_FILES="$JS_FILES $HTML_FILES $DOC_FILES $IMG_FILES"
 CH_FILES="$GEN_FILES temp-chrome-manifest.json ./src/updates/updates.xml"
 FF_FILES="$GEN_FILES temp-ff-manifest.json ./src/updates/updates.json ./src/icons/extension-dark.png"
