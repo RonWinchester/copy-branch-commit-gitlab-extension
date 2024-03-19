@@ -21,7 +21,7 @@
   ],
   "content_scripts": [
       {
-        "js": ["contentScript.js"],
+        "js": ["./src/js/contentScript.js"],
         "matches": [
           "https://*/*"
         ]
