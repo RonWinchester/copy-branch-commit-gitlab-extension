@@ -30,12 +30,12 @@ NAME="output/extension"
 rm -f $NAME.crx $NAME.xpi
 
 # Generate Chrome .crx extension package
-7z a -tzip -mx9 $NAME.crx $CH_FILES
-7z rn $NAME.crx temp-chrome-manifest.json manifest.json temp-popup.html popup.html
+7zz a -tzip -mx9 $NAME.crx $CH_FILES
+7zz rn $NAME.crx temp-chrome-manifest.json manifest.json temp-popup.html popup.html
 
 # Generate Firefox .xpi extension package (firefox manifest)
-7z a -tzip -mx9 $NAME.xpi $FF_FILES
-7z rn $NAME.xpi temp-ff-manifest.json manifest.json temp-popup.html popup.html
+7zz a -tzip -mx9 $NAME.xpi $FF_FILES
+7zz rn $NAME.xpi temp-ff-manifest.json manifest.json temp-popup.html popup.html
 
 # Remove temp files
 echo "\nDeleting temp files..."
